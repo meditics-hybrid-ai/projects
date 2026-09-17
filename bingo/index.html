@@ -276,6 +276,89 @@
         padding-top: 0;
       }
 
+      .download {
+        padding-top: 0;
+      }
+
+      .download-panel {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: center;
+        gap: clamp(2rem, 7vw, 5rem);
+        padding: clamp(1.5rem, 5vw, 3.5rem);
+        overflow: hidden;
+        border: 1px solid var(--border);
+        border-radius: 1.5rem;
+        background:
+          radial-gradient(circle at 100% 0%, rgb(22 136 242 / 13%), transparent 22rem),
+          var(--paper);
+        box-shadow: 0 0.8rem 2.5rem rgb(28 49 91 / 7%);
+      }
+
+      .download-panel h2 {
+        margin: 0 0 0.75rem;
+        color: var(--navy);
+        font-size: clamp(2rem, 5vw, 3.2rem);
+        letter-spacing: -0.04em;
+      }
+
+      .download-panel p {
+        max-width: 38rem;
+        margin: 0;
+        color: var(--muted);
+        font-size: 1.08rem;
+      }
+
+      .store-link {
+        display: inline-flex;
+        min-height: 3.5rem;
+        align-items: center;
+        gap: 0.75rem;
+        margin-top: 1.5rem;
+        padding: 0.65rem 1.15rem;
+        border-radius: 0.75rem;
+        background: #050505;
+        color: white;
+        font-weight: 800;
+        text-decoration: none;
+        transition: transform 150ms ease, box-shadow 150ms ease;
+      }
+
+      .store-link svg {
+        width: 1.65rem;
+        height: 1.65rem;
+        fill: currentColor;
+      }
+
+      .store-link:hover,
+      .store-link:focus-visible {
+        transform: translateY(-2px);
+        box-shadow: 0 0.65rem 1.5rem rgb(7 16 68 / 18%);
+      }
+
+      .qr-card {
+        margin: 0;
+        padding: 1rem;
+        border: 1px solid var(--border);
+        border-radius: 1rem;
+        background: white;
+        text-align: center;
+      }
+
+      .qr-card img {
+        display: block;
+        width: 11rem;
+        height: 11rem;
+        image-rendering: pixelated;
+      }
+
+      .qr-card figcaption {
+        margin-top: 0.5rem;
+        color: #364152;
+        font-size: 0.82rem;
+        font-weight: 750;
+      }
+
       .privacy-panel {
         display: flex;
         align-items: center;
@@ -347,6 +430,14 @@
           align-items: flex-start;
           flex-direction: column;
         }
+
+        .download-panel {
+          grid-template-columns: 1fr;
+        }
+
+        .qr-card {
+          justify-self: center;
+        }
       }
 
       @media (max-width: 34rem) {
@@ -367,6 +458,10 @@
         .button {
           transition: none;
         }
+
+        .store-link {
+          transition: none;
+        }
       }
     </style>
   </head>
@@ -379,6 +474,7 @@
         </a>
         <div class="nav-links">
           <a href="#features">Features</a>
+          <a href="#download">Download</a>
           <a href="privacy">Privacy</a>
         </div>
       </nav>
@@ -395,8 +491,8 @@
               spoken announcements, and no accounts or gambling mechanics.
             </p>
             <div class="actions">
-              <a class="button primary" href="#features">Explore the app</a>
-              <a class="button" href="privacy">Privacy policy</a>
+              <a class="button primary" href="#download">Download on iPhone</a>
+              <a class="button" href="#features">Explore the app</a>
             </div>
           </div>
           <div class="logo-card">
@@ -442,6 +538,38 @@
               details.
             </p>
           </article>
+        </div>
+      </section>
+
+      <section class="section download shell" id="download" aria-labelledby="download-title">
+        <div class="download-panel">
+          <div>
+            <p class="eyebrow" style="color: var(--blue)">Available on iPhone</p>
+            <h2 id="download-title">Ready to call BINGO?</h2>
+            <p>
+              Open the App Store directly, or scan the QR code with your phone's
+              camera to download Meditics BINGO.
+            </p>
+            <a
+              class="store-link"
+              href="https://apps.apple.com/us/app/meditics-bingo/id6800531021"
+              aria-label="Download Meditics BINGO on the Apple App Store"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M18.71 12.55c.03 3.28 2.87 4.37 2.9 4.39-.02.08-.45 1.55-1.5 3.07-.91 1.31-1.85 2.61-3.34 2.64-1.46.03-1.93-.87-3.6-.87-1.67 0-2.19.84-3.57.9-1.43.05-2.52-1.44-3.44-2.75-1.87-2.7-3.3-7.64-1.38-10.98a5.38 5.38 0 0 1 4.57-2.76c1.43-.03 2.77.96 3.64.96.86 0 2.49-1.19 4.2-1.02.72.03 2.73.29 4.02 2.18-.1.06-2.4 1.4-2.5 4.24ZM16.07 4.32c.76-.92 1.27-2.2 1.13-3.47-1.09.04-2.42.73-3.2 1.65-.7.8-1.32 2.1-1.15 3.34 1.22.09 2.46-.62 3.22-1.52Z"/>
+              </svg>
+              <span>Download on the App Store</span>
+            </a>
+          </div>
+          <figure class="qr-card">
+            <img
+              src="assets/images/meditics_bingo_app_store_qr.png"
+              alt="QR code for the Meditics BINGO App Store page"
+              width="176"
+              height="176"
+            >
+            <figcaption>Scan with your phone</figcaption>
+          </figure>
         </div>
       </section>
 
