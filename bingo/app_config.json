@@ -1,9 +1,9 @@
 {
-  "latest_version": "1.0.0",
+  "latest_version": "1.0.1+2",
   "minimum_supported_version": "1.0.0",
   "update_required": false,
   "android_update_url": "https://play.google.com/store/apps/details?id=ai.meditics.bingo",
-  "ios_update_url": "https://apps.apple.com/app/meditics-bingo/id0000000000",
-  "update_url": "https://corp.meditics.ai/meditics-bingo",
+  "ios_update_url": "https://apps.apple.com/us/app/meditics-bingo/id6800531021",
+  "update_url": "https://meditics-hybrid-ai.github.io/projects/bingo/",
   "message": "A newer version of Meditics BINGO is available."
 }
